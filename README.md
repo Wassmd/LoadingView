@@ -1,4 +1,6 @@
-# LoadingView
+# Loading View
+<img src="https://github.com/Wassmd/LoadingView/blob/master/loadingView.png">
+
 A lightweight simpile reusable Loading view in swift
 
 This can be used to show loading activity with spinner. 
