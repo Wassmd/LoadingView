@@ -7,7 +7,7 @@ This can be used in any view controller or add to any view
  
 The class can be extended to custome view
 
-![](https://github.com/Wassmd/LoadingView/blob/master/sample.png | height=250)
+<img src="https://github.com/Wassmd/LoadingView/blob/master/sample.png" width="375" height= "600">
 
 Below code show how to use in View Controller
 
