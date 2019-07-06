@@ -5,7 +5,7 @@ This can be used to show loading activity with spinner.
 
 This can be used in any view controller or add to any view
  
-The class can be extended to custome view
+This class can be extended to custome further loading UI
 
 <img src="https://github.com/Wassmd/LoadingView/blob/master/sample.png" width="375" height= "600">
 
