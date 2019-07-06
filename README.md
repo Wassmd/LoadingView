@@ -22,6 +22,6 @@ Below code show how to use in View Controller
         
 When no more need just hide it
 
-`loadingView.hide()
+     loadingView.hide() 
 
 
