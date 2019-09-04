@@ -3,6 +3,15 @@ import UIKit
 class LoadingView: UIView {
     
     
+    // MARK: - Inner Types
+    
+    private enum Constants {
+        static let loadingViewHeight: CGFloat = 80
+        static let loadingViewWidth: CGFloat = 80
+        static let defaultPadding: CGFloat = 8
+    }
+    
+    
     // MARK: - Properties
     // MARK: Immutable
     
@@ -24,6 +33,9 @@ class LoadingView: UIView {
         return stackView
     }()
     
+    
+    // MARK: - Initializers
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -35,6 +47,9 @@ class LoadingView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    // MARK: - Setups
     
     private func setupView() {
         isHidden = true
@@ -50,7 +65,13 @@ class LoadingView: UIView {
         loadingStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         loadingStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
         loadingStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        
+        widthAnchor.constraint(equalToConstant: Constants.loadingViewWidth).isActive = true
+        heightAnchor.constraint(equalToConstant: Constants.loadingViewHeight).isActive = true
     }
+    
+    
+    // MARK: - Actions
     
     func show() {
         isHidden = false
@@ -60,5 +81,15 @@ class LoadingView: UIView {
     func hide() {
         isHidden = true
         loadingIndicator.stopAnimating()
+    }
+    
+    
+    // MARK: - Helpers
+    
+    func placeInCenter(of view: UIView) {
+        NSLayoutConstraint.activate([
+            centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
 }
