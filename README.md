@@ -22,9 +22,8 @@ When no more need just hide it
 
      loadingView.hide() 
      
-Add constraints in main view or you can place in center by calling
+Add constraints in your View Controller to place is in center or wherever you want
 
- `loadingView.placeInCenter(of: view)`
      
 MIT License
 
